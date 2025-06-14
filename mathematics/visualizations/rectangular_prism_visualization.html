@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rectangular Prism Visualization</title>
+    <style>
+        body { 
+            margin: 0;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+        canvas { 
+            display: block; 
+        }
+        #info {
+            position: absolute;
+            top: 10px;
+            width: 100%;
+            text-align: center;
+            color: white;
+            pointer-events: none;
+        }
+        #legend {
+            position: absolute;
+            top: 40px;
+            width: 100%;
+            text-align: center;
+            color: white;
+            pointer-events: none;
+            font-size: 14px;
+        }
+        .color-box {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            margin-right: 5px;
+            border: 1px solid white;
+        }
+        .blue {
+            background-color: #0088FF;
+        }
+        .green {
+            background-color: #00CC44;
+        }
+        .yellow {
+            background-color: #FFCC00;
+        }
+        .red {
+            background-color: #FF4444;
+        }
+        #instructions {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            color: white;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="info">Rectangular Prism (2×5×11) Cut Into 110 Cubes with Spaces</div>
+    <div id="legend">
+        <span><span class="color-box blue"></span>3 Faces Exposed</span>
+        &nbsp;&nbsp;
+        <span><span class="color-box green"></span>2 Faces Exposed</span>
+        &nbsp;&nbsp;
+        <span><span class="color-box yellow"></span>1 Face Exposed</span>
+        &nbsp;&nbsp;
+        <span><span class="color-box red"></span>Interior (0 Faces)</span>
+    </div>
+    <div id="instructions">Click and drag to rotate. Scroll to zoom.</div>
+
+    <!-- Import Three.js from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/OrbitControls.js"></script>
+
+    <!-- Import our custom JavaScript -->
+    <script src="rectangular_prism_visualization.js"></script>
+</body>
+</html>
